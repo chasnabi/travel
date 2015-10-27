@@ -1,0 +1,23 @@
+<h1>Welcome to My Travel Site</h1>
+<p>The web's foremost website about where I want to travel</p>
+Hi there, <%= @name %>
+<p><%= @homeland %></p>
+
+<ul>
+<% @countries.each do |country| %>
+ <li><%= country %></li>
+</ul>
+  <% end %>
+
+
+<% @country_images.shuffle.each do |picture| %>
+<p>
+	<%= image_tag picture, alt: "some stuff" %>
+</p>
+<% end %>
+
+<% @country_image_hash.each do |k,v| %>
+	<p>
+	<%= image_tag v, alt: k %>
+</p>
+<%end%>
